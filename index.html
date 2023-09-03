@@ -4,19 +4,731 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/dist/style.css" />
+
+    <!-- g font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="dist/css/style.css" />
   </head>
-  <body>
-    <div class="container">
-      <div
-        class="max-w-md bg-slate-500 rounded-lg font-sans text-center mx-auto"
-      >
-        <h1>hello world</h1>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi,
-          aperiam?
-        </p>
+  <body class="font-inter">
+    <!-- navbar start -->
+    <header
+      class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10"
+    >
+      <div class="container">
+        <div class="flex items-center justify-between relative">
+          <div class="px-4">
+            <a href="#home" class="font-bold text-primary text-lg block py-5"
+              >Ihsanabdol_</a
+            >
+          </div>
+          <div class="flex items-center px-4">
+            <button
+              id="hamburger"
+              name="hamburger"
+              type="button"
+              class="block absolute right-4 lg:hidden"
+            >
+              <span
+                class="hamburger-line transition duration-300 ease-in-out origin-top-left"
+              ></span>
+              <span
+                class="hamburger-line transition duration-300 ease-in-out"
+              ></span>
+              <span
+                class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"
+              ></span>
+            </button>
+
+            <nav
+              id="nav-menu"
+              class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
+            >
+              <ul class="block lg:flex">
+                <li class="group">
+                  <a
+                    href="#home"
+                    class="text-base text-dark py-2 mx-3 font-semibold lg:text-sm flex group-hover:text-primary"
+                    >Beranda</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#about"
+                    class="text-base text-dark py-2 mx-3 font-semibold lg:text-sm flex group-hover:text-primary"
+                    >Tentang saya</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#portofolio"
+                    class="text-base text-dark py-2 mx-3 font-semibold lg:text-sm flex group-hover:text-primary"
+                    >Portofolio</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#clients"
+                    class="text-base text-dark py-2 mx-3 font-semibold lg:text-sm flex group-hover:text-primary"
+                    >Clients</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#blog"
+                    class="text-base text-dark py-2 mx-3 font-semibold lg:text-sm flex group-hover:text-primary"
+                    >Artikel</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#contact"
+                    class="text-base text-dark py-2 mx-3 font-semibold lg:text-sm flex group-hover:text-primary"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- navbar end -->
+
+    <!-- hero start -->
+    <section id="home" class="pt-36">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full self-center px-4 md:w-1/2">
+            <h1
+              class="text-base font-semibold text-primary md:text-xl lg:text-xl"
+            >
+              Halo semua 👊, saya
+              <span class="block font-bold text-dark text-4xl lg:text-5xl mt-1"
+                >Ihsan abdul</span
+              >
+            </h1>
+            <h2 class="font-medium text-secondary text-lg mb-5">
+              pelajar | <span class="text-dark">Programer</span>
+            </h2>
+            <p class="font-medium text-secondary mb-10 md:text-lg">
+              belajar web programing itu menyenangkan bukan ?
+              <span class="text-dark font-semibold">Bukan !</span>
+            </p>
+            <a
+              href="#"
+              class="py-3 px-4 bg-primary font-semibold hover:opacity-80 text-white rounded-full hover:shadow-lg transition duration-300 ease-in-out"
+              >Hubungi saya</a
+            >
+          </div>
+          <div class="w-full self-end px-4 md:w-1/2">
+            <div class="mt-9 relative md:mt-0 lg:-mt-4 lg:right-0">
+              <img
+                src="/gambar/saya (2).png"
+                alt="ihsan"
+                class="max-w-full mx-auto lg:max-w-sm"
+              />
+              <div
+                class="absolute top-4 -z-10 left-1/2 -translate-x-1/2 md:scale-110 lg:top-16"
+              >
+                <svg
+                  width="350"
+                  height="350"
+                  viewBox="0 0 200 200"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill="#14b8a6"
+                    d="M32.5,-46.7C44.2,-36.2,57.2,-29.5,62.3,-19C67.3,-8.6,64.3,5.7,56.1,14.2C47.8,22.7,34.2,25.5,23.9,33.2C13.7,40.8,6.9,53.3,-2.5,56.8C-11.9,60.3,-23.8,54.7,-29.5,45.6C-35.2,36.5,-34.7,23.8,-40.5,11.8C-46.3,-0.3,-58.5,-11.6,-59.2,-22.4C-60,-33.1,-49.4,-43.3,-37.6,-53.7C-25.9,-64.2,-12.9,-74.9,-1.3,-73.2C10.4,-71.5,20.8,-57.2,32.5,-46.7Z"
+                    transform="translate(100 100)"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- hero end -->
+
+    <!-- about start -->
+    <section id="about" class="pt-48 pb-32">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full px-4 mb-10 lg:w-1/2">
+            <h2 class="uppercase text-primary font-bold text-base mb-2">
+              tentang saya
+            </h2>
+            <h1 class="text-dark text-2xl lg:text-4xl font-extrabold">
+              Yuk, Belajar web programing bersama saya
+            </h1>
+            <p
+              class="mt-4 font-medium text-base text-secondary max-w-xl lg:text-lg"
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
+              doloremque aut quibusdam consectetur eos necessitatibus vero ea,
+              dolorum voluptatibus laborum?
+            </p>
+          </div>
+          <div class="w-full px-4 lg:w-1/2">
+            <h2
+              class="font-semibold text-dark text-2xl mb-4 lg:pt-9 lg:text-3xl"
+            >
+              Mari berteman
+            </h2>
+            <p class="font-medium text-base text-secondary mb-6 lg:text-lg">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias
+              quo, ullam ducimus incidunt ratione, harum autem quae optio fuga
+            </p>
+            <div class="flex items-center">
+              <!-- whatsapp -->
+              <a
+                href="https://youtu.be/nn1vPWtO6vk "
+                target="_blank"
+                class="w-9 h-9 rounded-full border-slate-300 text-slate-300 flex justify-center items-center border-2 hover:border-primary hover:bg-primary hover:text-white transition duration-300 mr-3"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  widht="20"
+                  height="20"
+                  viewBox="0 0 448 512"
+                  class="fill-current"
+                >
+                  <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path
+                    d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"
+                  />
+                </svg>
+              </a>
+              <!-- wathsapp -->
+
+              <!-- instagram -->
+              <a
+                href="https://www.instagram.com/ihsanabdol_/"
+                target="_blank"
+                class="w-9 h-9 rounded-full flex justify-center items-center border-2 text-slate-300 border-slate-300 hover:border-primary hover:bg-primary hover:text-white transition duration-300 mr-3"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="20"
+                  width="20"
+                  viewBox="0 0 448 512"
+                  class="fill-current"
+                >
+                  <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path
+                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                  />
+                </svg>
+              </a>
+              <!-- instagram -->
+
+              <!-- github -->
+              <a
+                href="https://github.com/Ihsansrc"
+                target="_blank"
+                class="w-9 h-9 rounded-full flex justify-center items-center border-2 text-slate-300 border-slate-300 hover:border-primary hover:bg-primary hover:text-white transition duration-300 mr-3"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="20"
+                  width="20"
+                  viewBox="0 0 496 512"
+                  class="fill-current"
+                >
+                  <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path
+                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                  />
+                </svg>
+              </a>
+              <!-- github -->
+
+              <!-- love -->
+              <a
+                href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tiktok.com%2F%40msyaallahririnn%2Fvideo%2F7212507568906734875&psig=AOvVaw1QVmNG9Tmg5XtrL0b6aNnI&ust=1693551421404000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCIjJr-qohoEDFQAAAAAdAAAAABAE"
+                target="_blank"
+                class="w-9 h-9 rounded-full flex justify-center items-center border-2 text-slate-300 border-slate-300 hover:border-primary hover:bg-primary hover:text-white transition duration-300 mr-3"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="20"
+                  widht="20"
+                  viewBox="0 0 512 512"
+                  class="fill-current"
+                >
+                  <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path
+                    d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"
+                  />
+                </svg>
+              </a>
+              <!-- love -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about end -->
+
+    <!-- portofolio start -->
+    <div id="portofolio" class="pt-36 pb-16 bg-slate-100">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="max-w-xl mx-auto text-center mb-16">
+            <h4 class="font-semibold text-lg text-primary mb-2">Portofolio</h4>
+            <h2 class="font-bold text-dark mb-4 text-3xl md:text-4xl">
+              Project Terbaru
+            </h2>
+            <p class="font-medium text-secondary lg:text-lg">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis
+              ducimus non atque velit asperiores unde cumque consequuntur?
+              Tenetur, maiores aliquid!
+            </p>
+          </div>
+        </div>
+        <div
+          class="w-full px-4 flex flex-wrap justify-center lg:w-10/12 lg:mx-auto"
+        >
+          <div class="mb-12 p-4 md:p-6 md:w-1/2">
+            <div class="rounded-md overflow-hidden shadow-md">
+              <img src="/gambar/satu.png" alt="portofolio" width="w-full" />
+            </div>
+            <h3 class="font-semibold text-dark text-xl mt-5 mb-3">
+              Landing page
+            </h3>
+            <p class="font-medium text-base text-secondary">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Recusandae atque labore nemo?
+            </p>
+          </div>
+          <div class="mb-12 p-4 md:p-6 md:w-1/2">
+            <div class="rounded-md overflow-hidden shadow-md">
+              <img src="/gambar/dua.png" alt="portofolio" width="w-full" />
+            </div>
+            <h3 class="font-semibold text-dark text-xl mt-5 mb-3">Merch</h3>
+            <p class="font-medium text-base text-secondary">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Similique inventore voluptatem debitis dignissimos earum! Minus!
+            </p>
+          </div>
+        </div>
       </div>
     </div>
+    <!-- portofolio end -->
+
+    <!-- client star -->
+    <section id="clients" class="pt-44 pb-32 bg-slate-700">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="mx-auto text-center mb-16">
+            <h4 class="font-semibold text-lg text-primary mb-2">Client</h4>
+            <h2 class="font-bold mb-4 text-3xl text-white lg:text-4xl">
+              Yang Pernah Bekerja sama
+            </h2>
+            <p class="font-medium text-secondary lg:text-lg">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam
+              nemo perspiciatis nobis?
+            </p>
+          </div>
+        </div>
+        <div class="w-full px-4">
+          <div class="flex flex-wrap items-center justify-center">
+            <a
+              href="#"
+              class="max-w-[110px] lg:max-w-[130px] mx-4 py-4 grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8 ease-in-out"
+            >
+              <img src="/gambar/react.png" alt="botsrap" class="saturate-200" />
+            </a>
+            <a
+              href="#"
+              class="max-w-[120px] lg:max-w-[130px] mx-4 py-4 grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8 ease-in-out"
+            >
+              <img
+                src="/gambar/botsrap.png"
+                alt="botsrap"
+                class="saturate-200"
+              />
+            </a>
+            <a
+              href="#"
+              class="max-w-[120px] lg:max-w-[130px] mx-4 py-4 grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8 ease-in-out"
+            >
+              <img src="/gambar/tailwind.png" alt="botsrap" />
+            </a>
+            <a
+              href="#"
+              class="max-w-[120px] lg:max-w-[130px] mx-4 py-4 grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8 ease-in-out"
+            >
+              <img src="/gambar/html.png" alt="botsrap" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- client end -->
+
+    <!-- blog start -->
+    <section id="blog" class="pt-36 pb-32 bg-slate-100">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="max-w-xl mx-auto text-center mb-16">
+            <h4 class="font-semibold text-lg text-primary mb-2">Blog</h4>
+            <h2 class="font-bold text-dark mb-4 text-3xl md:text-4xl">
+              Tulisan Terkini
+            </h2>
+            <p class="font-medium text-secondary lg:text-lg">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+              repellendus deserunt voluptatem corporis.
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-wrap justify-center">
+          <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg mb-10">
+              <img
+                src="https://source.unsplash.com/360x200?programming"
+                alt="programer"
+                class="w-full"
+              />
+              <div class="py-5 px-6">
+                <h3>
+                  <!-- truncate membuat jika textnya kepanjangan dia akan menjadi titk -->
+                  <a
+                    href="#"
+                    class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate"
+                  >
+                    Tips Belajar Programing
+                  </a>
+                </h3>
+                <p class="font-medium text-secondary text-base mb-6">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Nesciunt, sint.
+                </p>
+                <a
+                  href="#"
+                  class="font-medium text-sm bg-primary py-2 px-5 rounded-lg text-white hover:opacity-80 mb-6"
+                  >Baca Selengkapnya</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg mb-10">
+              <img
+                src="https://source.unsplash.com/360x200?mechanical+keyboard"
+                alt="programer"
+                class="w-full"
+              />
+              <div class="py-5 px-6">
+                <h3>
+                  <!-- truncate membuat jika textnya kepanjangan dia akan menjadi titk -->
+                  <a
+                    href="#"
+                    class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate"
+                  >
+                    Review Keyboard GMMK Pro
+                  </a>
+                </h3>
+                <p class="font-medium text-secondary text-base mb-6">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+                  ut perferendis in!
+                </p>
+                <a
+                  href="#"
+                  class="font-medium text-sm bg-primary py-2 px-5 rounded-lg text-white hover:opacity-80 mb-6"
+                  >Baca Selengkapnya</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg mb-10">
+              <img
+                src="https://source.unsplash.com/360x200?coffe"
+                alt="programer"
+                class="w-full"
+              />
+              <div class="py-5 px-6">
+                <h3>
+                  <!-- truncate membuat jika textnya kepanjangan dia akan menjadi titk -->
+                  <a
+                    href="#"
+                    class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate"
+                  >
+                    Minum Bang ?
+                  </a>
+                </h3>
+                <p class="font-medium text-secondary text-base mb-6">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Quia, quae?
+                </p>
+                <a
+                  href="#"
+                  class="font-medium text-sm bg-primary py-2 px-5 rounded-lg text-white hover:opacity-80 mb-6"
+                  >Baca Selengkapnya</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- blog end -->
+
+    <!-- contact start -->
+    <section id="contact" class="pt-36 pb-32">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="max-w-xl mx-auto text-center mb-16">
+            <h4 class="font-semibold text-lg text-primary mb-2">Contact</h4>
+            <h2 class="font-bold text-dark mb-4 text-3xl md:text-4xl">
+              Hubungi watashi
+            </h2>
+            <p class="text-secondary mb-4">Свяжитесь co мной</p>
+            <p class="font-medium text-secondary lg:text-lg">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim,
+              ducimus!
+            </p>
+          </div>
+        </div>
+        <form>
+          <div class="w-full lg:w-2/3 lg:mx-auto">
+            <div class="w-full px-4 mb-8">
+              <label for="name" class="text-base font-bold text-primary"
+                >Nama</label
+              >
+              <input
+                type="text"
+                id="name"
+                class="w-full bg-slate-100 text-dark p-2 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"
+              />
+            </div>
+            <div class="w-full px-4 mb-8">
+              <label for="email" class="text-base font-bold text-primary"
+                >Email</label
+              >
+              <input
+                type="text"
+                id="email"
+                class="w-full bg-slate-100 text-dark p-2 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"
+              />
+            </div>
+            <div class="w-full px-4 mb-8">
+              <label for="mesage" class="text-base font-bold text-primary"
+                >Pesan</label
+              >
+              <textarea
+                type="text"
+                id="name"
+                class="w-full bg-slate-100 h-32 text-dark p-2 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"
+              ></textarea>
+            </div>
+            <div class="w-full px-4">
+              <button
+                class="text-base font-semibold text-white bg-primary py-2 px-8 rounded-lg w-full hover:opacity-80 hover:shadow transition duration-500"
+              >
+                Kirim
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- contact end -->
+
+    <!-- footer start -->
+    <footer class="bg-dark pt-24 pb-12">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full md:w-1/3 px-4 mb-12 text-slate-300 font-medium">
+            <h2 class="font-bold text-4xl text-white mb-5">KOTEMI</h2>
+            <h2 class="font-bold text-2xl mb-2">Hubungi kami</h2>
+            <p>ihsan100905@gmail.com</p>
+            <p>Jl.Merdeka, ciawitali no.189</p>
+            <p>Garut 📍</p>
+          </div>
+          <div class="w-full px-4 mb-12 md:w-1/3">
+            <h3 class="font-semibold text-xl text-white mb-5">
+              Kategori Tulisan
+            </h3>
+            <ul class="text-slate-300">
+              <li>
+                <a
+                  href="#"
+                  class="inline-block text-base hover:text-primary mb-3"
+                  >Programing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="inline-block text-base hover:text-primary mb-3"
+                  >Teknologi</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="inline-block text-base hover:text-primary mb-3"
+                  >Gaya hidup</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="w-full px-4 mb-12 md:w-1/3">
+            <h3 class="font-semibold text-xl text-white mb-5">Tautan</h3>
+            <ul class="text-slate-300">
+              <li>
+                <a
+                  href="#home"
+                  class="inline-block text-base hover:text-primary mb-3"
+                  >Beranda</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="inline-block text-base hover:text-primary mb-3"
+                  >Tentang saya</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#clients"
+                  class="inline-block text-base hover:text-primary mb-3"
+                  >Client</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#blog"
+                  class="inline-block text-base hover:text-primary mb-3"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="inline-block text-base hover:text-primary mb-3"
+                  >Contanct</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="w-full pt-10 border-t border-slate-700">
+          <div class="flex items-center justify-center mb-5">
+            <!-- whatsapp -->
+            <a
+              href="https://youtu.be/nn1vPWtO6vk "
+              target="_blank"
+              class="w-9 h-9 rounded-full border-slate-300 text-slate-300 flex justify-center items-center border-2 hover:border-primary hover:bg-primary hover:text-white transition duration-300 mr-3"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                widht="20"
+                height="20"
+                viewBox="0 0 448 512"
+                class="fill-current"
+              >
+                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                  d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"
+                />
+              </svg>
+            </a>
+            <!-- wathsapp -->
+
+            <!-- instagram -->
+            <a
+              href="https://www.instagram.com/ihsanabdol_/"
+              target="_blank"
+              class="w-9 h-9 rounded-full flex justify-center items-center border-2 text-slate-300 border-slate-300 hover:border-primary hover:bg-primary hover:text-white transition duration-300 mr-3"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="20"
+                width="20"
+                viewBox="0 0 448 512"
+                class="fill-current"
+              >
+                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                />
+              </svg>
+            </a>
+            <!-- instagram -->
+
+            <!-- github -->
+            <a
+              href="https://github.com/Ihsansrc"
+              target="_blank"
+              class="w-9 h-9 rounded-full flex justify-center items-center border-2 text-slate-300 border-slate-300 hover:border-primary hover:bg-primary hover:text-white transition duration-300 mr-3"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="20"
+                width="20"
+                viewBox="0 0 496 512"
+                class="fill-current"
+              >
+                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                />
+              </svg>
+            </a>
+            <!-- github -->
+
+            <!-- love -->
+            <a
+              href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tiktok.com%2F%40msyaallahririnn%2Fvideo%2F7212507568906734875&psig=AOvVaw1QVmNG9Tmg5XtrL0b6aNnI&ust=1693551421404000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCIjJr-qohoEDFQAAAAAdAAAAABAE"
+              target="_blank"
+              class="w-9 h-9 rounded-full flex justify-center items-center border-2 text-slate-300 border-slate-300 hover:border-primary hover:bg-primary hover:text-white transition duration-300 mr-3"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="20"
+                widht="20"
+                viewBox="0 0 512 512"
+                class="fill-current"
+              >
+                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                  d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"
+                />
+              </svg>
+            </a>
+            <!-- love -->
+          </div>
+          <p class="font-medium text-xs text-slate-500 text-center">
+            Dibuat dengan 💗 oleh
+            <a
+              href="https://www.instagram.com/ihsanabdol_/"
+              target="_blank"
+              class="font-bold text-primary"
+              >ihsanabdol_
+            </a>
+            menggunakan
+            <a
+              href="https://tailwindcss.com/"
+              target="_blank"
+              class="font-bold text-sky-500"
+              >Tailwindcss</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+    <script src="dist/js/script.js"></script>
   </body>
 </html>

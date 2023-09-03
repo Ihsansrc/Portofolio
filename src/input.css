@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* ini dibuat agar navbar nya menempel didepan dan ketika scroll akan blur karen di stell di js */
+.navbar-fixed {
+  @apply fixed z-[9999] bg-white bg-opacity-80;
+  backdrop-filter: blur(5px);
+  box-shadow: inset 0 -1px 0 0 rgba(82, 80, 80, 0.1);
+}
+
+.hamburger-line {
+  @apply w-[27px] h-[2px] my-1.5 bg-dark block;
+}
+
+@layer base {
+  p {
+    font-family: sans-serif;
+  }
+}
+
+.hamburger-active > span:nth-child(1) {
+  @apply rotate-[36deg];
+}
+
+.hamburger-active > span:nth-child(2) {
+  @apply scale-0;
+}
+
+.hamburger-active > span:nth-child(3) {
+  @apply -rotate-[36deg];
+}

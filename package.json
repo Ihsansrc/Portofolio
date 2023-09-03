@@ -78,7 +78,7 @@
     "yaml": "^2.3.2"
   },
   "scripts": {
-    "dev": "npx tailwindcss -i ./src/input.css -o ./dist/style.css --watch ",
+    "dev": "npx tailwindcss -i ./src/input.css -o ./dist/css/style.css --watch ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
