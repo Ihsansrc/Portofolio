@@ -48,50 +48,66 @@
 
             <nav
               id="nav-menu"
-              class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
+              class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none dark:shadow-slate-500 dark:bg-dark dark:bg-transparent"
             >
-              <ul class="block lg:flex">
+              <ul class="block lg:flex dark:bg-transparent">
                 <li class="group">
                   <a
                     href="#home"
-                    class="text-base text-dark py-2 mx-3 font-semibold lg:text-sm flex group-hover:text-primary"
+                    class="text-base text-dark py-2 mx-3 font-semibold lg:text-sm flex group-hover:text-primary dark:text-white"
                     >Beranda</a
                   >
                 </li>
                 <li class="group">
                   <a
                     href="#about"
-                    class="text-base text-dark py-2 mx-3 font-semibold lg:text-sm flex group-hover:text-primary"
+                    class="text-base text-dark py-2 mx-3 font-semibold lg:text-sm flex group-hover:text-primary dark:text-white"
                     >Tentang saya</a
                   >
                 </li>
                 <li class="group">
                   <a
                     href="#portofolio"
-                    class="text-base text-dark py-2 mx-3 font-semibold lg:text-sm flex group-hover:text-primary"
+                    class="text-base text-dark py-2 mx-3 font-semibold lg:text-sm flex group-hover:text-primary dark:text-white"
                     >Portofolio</a
                   >
                 </li>
                 <li class="group">
                   <a
                     href="#clients"
-                    class="text-base text-dark py-2 mx-3 font-semibold lg:text-sm flex group-hover:text-primary"
+                    class="text-base text-dark py-2 mx-3 font-semibold lg:text-sm flex group-hover:text-primary dark:text-white"
                     >Clients</a
                   >
                 </li>
                 <li class="group">
                   <a
                     href="#blog"
-                    class="text-base text-dark py-2 mx-3 font-semibold lg:text-sm flex group-hover:text-primary"
+                    class="text-base text-dark py-2 mx-3 font-semibold lg:text-sm flex group-hover:text-primary dark:text-white"
                     >Artikel</a
                   >
                 </li>
                 <li class="group">
                   <a
                     href="#contact"
-                    class="text-base text-dark py-2 mx-3 font-semibold lg:text-sm flex group-hover:text-primary"
+                    class="text-base text-dark py-2 mx-3 font-semibold lg:text-sm flex group-hover:text-primary dark:text-white"
                     >Contact</a
                   >
+                </li>
+                <li class="mt-3 flex items-center pl-8">
+                  <div class="flex">
+                    <span class="mr-2 text-sm text-slate-500">light</span>
+                    <input type="checkbox" class="hidden" id="dark-toggle" />
+                    <label for="dark-toggle">
+                      <div
+                        class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1"
+                      >
+                        <div
+                          class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out"
+                        ></div>
+                      </div>
+                    </label>
+                    <span class="ml-2 text-sm text-slate-500">dark</span>
+                  </div>
                 </li>
               </ul>
             </nav>
@@ -102,7 +118,7 @@
     <!-- navbar end -->
 
     <!-- hero start -->
-    <section id="home" class="pt-36">
+    <section id="home" class="pt-36 dark:bg-dark">
       <div class="container">
         <div class="flex flex-wrap">
           <div class="w-full self-center px-4 md:w-1/2">
@@ -735,8 +751,11 @@
     <!-- back to top start -->
     <a
       href="#home"
-      class="rounded-full h-14 w-14 block bg-primary p-4 fixed z-[999] bottom-4 right-4"
-    ></a>
+      class="rounded-full justify-center items-center h-14 w-14 bg-primary p-4 fixed z-[999] bottom-4 right-4 hover:animate-pulse hidden"
+      id="top"
+    >
+      <span class="block h-5 w-5 border-t-2 border-l-2 rotate-45 mt-2"></span>
+    </a>
     <!-- back to top end -->
 
     <script src="dist/js/script.js"></script>

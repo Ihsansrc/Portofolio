@@ -8,13 +8,13 @@ body {
 
 /* ini dibuat agar navbar nya menempel didepan dan ketika scroll akan blur karen di stell di js */
 .navbar-fixed {
-  @apply fixed z-[9999] bg-white bg-opacity-80 backdrop-blur-sm;
+  @apply fixed z-[9999] bg-white bg-opacity-80 backdrop-blur-sm dark:bg-dark dark:bg-opacity-75;
 
   box-shadow: inset 0 -1px 0 0 rgba(82, 80, 80, 0.1);
 }
 
 .hamburger-line {
-  @apply w-[27px] h-[2px] my-1.5 bg-dark block;
+  @apply w-[27px] h-[2px] my-1.5 bg-dark block dark:bg-white;
 }
 
 @layer base {
@@ -33,4 +33,8 @@ body {
 
 .hamburger-active > span:nth-child(3) {
   @apply -rotate-[36deg];
+}
+
+#dark-toggle:checked ~ label div.toggle-circle {
+  @apply translate-x-3;
 }
