@@ -15,6 +15,21 @@
 
     <!-- css -->
     <link rel="stylesheet" href="dist/css/style.css" />
+
+    <!-- dark mode local storage biar menyesuaikan localnya  -->
+    <script>
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+
+    <!-- akhir -->
   </head>
   <body class="font-inter">
     <!-- navbar start -->
@@ -48,7 +63,7 @@
 
             <nav
               id="nav-menu"
-              class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none dark:shadow-slate-500 dark:bg-dark dark:bg-transparent"
+              class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none dark:shadow-slate-500 dark:bg-dark lg:dark:bg-transparent"
             >
               <ul class="block lg:flex dark:bg-transparent">
                 <li class="group">
@@ -93,7 +108,7 @@
                     >Contact</a
                   >
                 </li>
-                <li class="mt-3 flex items-center pl-8">
+                <li class="mt-3 lg:mt-0 flex items-center pl-8">
                   <div class="flex">
                     <span class="mr-2 text-sm text-slate-500">light</span>
                     <input type="checkbox" class="hidden" id="dark-toggle" />
@@ -126,7 +141,8 @@
               class="text-base font-semibold text-primary md:text-xl lg:text-xl"
             >
               Halo semua 👊, saya
-              <span class="block font-bold text-dark text-4xl lg:text-5xl mt-1"
+              <span
+                class="block font-bold text-dark text-4xl lg:text-5xl mt-1 dark:text-white"
                 >Ihsan abdul</span
               >
             </h1>
@@ -135,7 +151,9 @@
             </h2>
             <p class="font-medium text-secondary mb-10 md:text-lg">
               belajar web programing itu menyenangkan bukan ?
-              <span class="text-dark font-semibold">Bukan !</span>
+              <span class="text-dark font-semibold dark:text-white"
+                >Bukan !</span
+              >
             </p>
             <a
               href="#"
@@ -148,10 +166,10 @@
               <img
                 src="/gambar/saya (2).png"
                 alt="ihsan"
-                class="max-w-full mx-auto lg:max-w-sm"
+                class="max-w-full relative z-10 mx-auto lg:max-w-sm"
               />
               <div
-                class="absolute top-4 -z-10 left-1/2 -translate-x-1/2 md:scale-110 lg:top-16"
+                class="absolute top-4 left-1/2 -translate-x-1/2 md:scale-110 lg:top-16"
               >
                 <svg
                   width="350"
@@ -174,14 +192,16 @@
     <!-- hero end -->
 
     <!-- about start -->
-    <section id="about" class="pt-48 pb-32">
+    <section id="about" class="pt-48 pb-32 dark:bg-dark">
       <div class="container">
         <div class="flex flex-wrap">
           <div class="w-full px-4 mb-10 lg:w-1/2">
             <h2 class="uppercase text-primary font-bold text-base mb-2">
               tentang saya
             </h2>
-            <h1 class="text-dark text-2xl lg:text-4xl font-extrabold">
+            <h1
+              class="text-dark text-2xl lg:text-4xl font-extrabold dark:text-white"
+            >
               Yuk, Belajar web programing bersama saya
             </h1>
             <p
@@ -194,7 +214,7 @@
           </div>
           <div class="w-full px-4 lg:w-1/2">
             <h2
-              class="font-semibold text-dark text-2xl mb-4 lg:pt-9 lg:text-3xl"
+              class="font-semibold text-dark text-2xl mb-4 lg:pt-9 lg:text-3xl dark:text-white"
             >
               Mari berteman
             </h2>
@@ -294,12 +314,14 @@
     <!-- about end -->
 
     <!-- portofolio start -->
-    <div id="portofolio" class="pt-36 pb-16 bg-slate-100">
+    <div id="portofolio" class="pt-36 pb-16 bg-slate-100 dark:bg-slate-800">
       <div class="container">
         <div class="w-full px-4">
           <div class="max-w-xl mx-auto text-center mb-16">
             <h4 class="font-semibold text-lg text-primary mb-2">Portofolio</h4>
-            <h2 class="font-bold text-dark mb-4 text-3xl md:text-4xl">
+            <h2
+              class="font-bold text-dark mb-4 text-3xl md:text-4xl dark:text-white"
+            >
               Project Terbaru
             </h2>
             <p class="font-medium text-secondary lg:text-lg">
@@ -316,7 +338,9 @@
             <div class="rounded-md overflow-hidden shadow-md">
               <img src="/gambar/satu.png" alt="portofolio" width="w-full" />
             </div>
-            <h3 class="text-dark text-xl mt-5 mb-3 font-semibold">
+            <h3
+              class="text-dark text-xl mt-5 mb-3 font-semibold dark:text-white"
+            >
               Landing page
             </h3>
             <p class="font-medium text-base text-secondary">
@@ -330,7 +354,11 @@
                 <img src="/gambar/dua.png" alt="portofolio" width="w-full" />
               </div>
             </a>
-            <h3 class="font-semibold text-dark text-xl mt-5 mb-3">Merch</h3>
+            <h3
+              class="font-semibold text-dark text-xl mt-5 mb-3 dark:text-white"
+            >
+              Merch
+            </h3>
             <p class="font-medium text-base text-secondary">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Similique inventore voluptatem debitis dignissimos earum! Minus!
@@ -342,12 +370,14 @@
     <!-- portofolio end -->
 
     <!-- client star -->
-    <section id="clients" class="pt-44 pb-32 bg-slate-700">
+    <section id="clients" class="pt-44 pb-32 bg-slate-700 dark:bg-slate-300">
       <div class="container">
         <div class="w-full px-4">
           <div class="mx-auto text-center mb-16">
             <h4 class="font-semibold text-lg text-primary mb-2">Client</h4>
-            <h2 class="font-bold mb-4 text-3xl text-white lg:text-4xl">
+            <h2
+              class="font-bold mb-4 text-3xl text-white lg:text-4xl dark:text-dark"
+            >
               Yang Pernah Bekerja sama
             </h2>
             <p class="font-medium text-secondary lg:text-lg">
@@ -393,12 +423,14 @@
     <!-- client end -->
 
     <!-- blog start -->
-    <section id="blog" class="pt-36 pb-32 bg-slate-100">
+    <section id="blog" class="pt-36 pb-32 bg-slate-100 dark:bg-dark">
       <div class="container">
         <div class="w-full px-4">
           <div class="max-w-xl mx-auto text-center mb-16">
             <h4 class="font-semibold text-lg text-primary mb-2">Blog</h4>
-            <h2 class="font-bold text-dark mb-4 text-3xl md:text-4xl">
+            <h2
+              class="font-bold text-dark mb-4 text-3xl md:text-4xl dark:text-white"
+            >
               Tulisan Terkini
             </h2>
             <p class="font-medium text-secondary lg:text-lg">
@@ -409,7 +441,9 @@
         </div>
         <div class="flex flex-wrap justify-center">
           <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-            <div class="bg-white rounded-xl overflow-hidden shadow-lg mb-10">
+            <div
+              class="bg-white rounded-xl overflow-hidden shadow-lg mb-10 dark:bg-slate-800"
+            >
               <img
                 src="https://source.unsplash.com/360x200?programming"
                 alt="programer"
@@ -420,7 +454,7 @@
                   <!-- truncate membuat jika textnya kepanjangan dia akan menjadi titk -->
                   <a
                     href="#"
-                    class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate"
+                    class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate dark:text-white"
                   >
                     Tips Belajar Programing
                   </a>
@@ -431,14 +465,16 @@
                 </p>
                 <a
                   href="#"
-                  class="font-medium text-sm bg-primary py-2 px-5 rounded-lg text-white hover:opacity-80 mb-6"
+                  class="font-medium text-sm bg-primary py-2 px-5 rounded-lg text-white dark:text-white hover:opacity-80 mb-6"
                   >Baca Selengkapnya</a
                 >
               </div>
             </div>
           </div>
           <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-            <div class="bg-white rounded-xl overflow-hidden shadow-lg mb-10">
+            <div
+              class="bg-white rounded-xl overflow-hidden shadow-lg mb-10 dark:bg-slate-800"
+            >
               <img
                 src="https://source.unsplash.com/360x200?mechanical+keyboard"
                 alt="programer"
@@ -449,7 +485,7 @@
                   <!-- truncate membuat jika textnya kepanjangan dia akan menjadi titk -->
                   <a
                     href="#"
-                    class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate"
+                    class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate dark:text-white"
                   >
                     Review Keyboard GMMK Pro
                   </a>
@@ -467,7 +503,9 @@
             </div>
           </div>
           <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-            <div class="bg-white rounded-xl overflow-hidden shadow-lg mb-10">
+            <div
+              class="bg-white rounded-xl overflow-hidden shadow-lg mb-10 dark:bg-slate-800"
+            >
               <img
                 src="https://source.unsplash.com/360x200?coffe"
                 alt="programer"
@@ -478,7 +516,7 @@
                   <!-- truncate membuat jika textnya kepanjangan dia akan menjadi titk -->
                   <a
                     href="#"
-                    class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate"
+                    class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate dark:text-white"
                   >
                     Minum Bang ?
                   </a>
@@ -501,12 +539,14 @@
     <!-- blog end -->
 
     <!-- contact start -->
-    <section id="contact" class="pt-36 pb-32">
+    <section id="contact" class="pt-36 pb-32 dark:bg-slate-800">
       <div class="container">
         <div class="w-full px-4">
           <div class="max-w-xl mx-auto text-center mb-16">
             <h4 class="font-semibold text-lg text-primary mb-2">Contact</h4>
-            <h2 class="font-bold text-dark mb-4 text-3xl md:text-4xl">
+            <h2
+              class="font-bold text-dark mb-4 text-3xl md:text-4xl dark:text-white"
+            >
               Hubungi watashi
             </h2>
             <p class="text-secondary mb-4">Свяжитесь co мной</p>
